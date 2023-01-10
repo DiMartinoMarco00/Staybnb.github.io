@@ -1,0 +1,45 @@
+.gallery 
+{
+    display: grid;
+    grid-gap: 10px;
+    /*
+        (da inserire a livello di contenitore) 
+        La proprietà grid-template-areas ci permette di definire un valore tra singoli apici 
+        che corrisponde al valore della proprietà grid-area dell' elemento del contenitore.
+
+        Il singolo apice rappresenta una riga, il valore rappresenta la posizione della colonna occupata, 
+        i . rappresentano le posizioni degli altri elementi del contenitore.
+
+        es: 
+        il contenitore ha 5 elementi come valore della proprietà grid-template-areas: abbiamo: 'first first . .'
+        cio significa che l' elemento che possiede first come valore della proprietà grid-area occuperà 
+        la prima e la seconda colonna della riga mentre le altre due colonne sulla stessa riga verranno 
+        occupate dagli altri elementi del contenitore.
+        
+        Possiamo specificare più righe inserendo altri singoli apici separati da uno spazio dai precedenti.
+
+    */
+    grid-template-areas: 'first first . .' 'first first . .';
+    margin: 20px 0;
+}
+
+.gallery div img 
+{
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+.gallery-img-1
+{
+    grid-area: first;
+}
+
+
+@media only screen and (max-width: 767px)
+{
+    .gallery 
+    {
+        grid-template-areas: 'first first' '. .' '. .';
+    }
+}

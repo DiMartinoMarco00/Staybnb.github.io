@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dettagli casa</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <!-- JS -->
+    <script src="JS/toggle-btn.js" defer></script>
+</head>
+<body>
+    <!----------------------------------------------- navbar ------------------------------------------------------>
+    <nav id="navbar" class="navbar-white">
+        <a href="index.html">
+            <img src="images/logo-red.png" class="logo" alt="c' è un problema nella visualizzazione dell' immagine">
+        </a>
+       
+        <ul class="nav-links">
+            <li><a href="#" class="active">luoghi famosi</a></li>
+            <li><a href="#">Viaggia all' estero</a></li>
+            <li><a href="listing.html">Pacchetti online</a></li>
+        </ul><!-- fine nav.links -->
+       
+        <a href="#" class="register-btn">Registrati adesso</a>
+        <i class="fas fa-bars"></i>
+    </nav><!-- fine nav#navbar -->
+
+    <!--------------------------------------------- house-details ---------------------------------------------->
+
+    <div class="house-details">
+        <!--------------------------------------------- house-title ---------------------------------------------->
+        <div class="house-title">
+            <h1>Wenge House</h1>
+
+            <div class="row">
+                <div>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <i class="far fa-star"></i>
+                    <span>245 recensioni</span>
+                </div>
+
+                <div>
+                    <p>Posizione: San Francisco, California, Stati Uniti</p>
+                </div>
+            </div><!-- fine div.row -->         
+        </div><!-- fine div.house-title -->
+        
+        <!----------------------------------------------- gallery --------------------------------------------->
+
+        <div class="gallery">
+            <div class="gallery-img-1"><img src="images/house-1.png" alt="c' è un problema nella visualizzazione dell' immagine"></div>
+            <div><img src="images/house-2.png" alt="c' è un problema nella visualizzazione dell' immagine"></div>
+            <div><img src="images/house-3.png" alt="c' è un problema nella visualizzazione dell' immagine"></div>
+            <div><img src="images/house-4.png" alt="c' è un problema nella visualizzazione dell' immagine"></div>
+            <div><img src="images/house-5.png" alt="c' è un problema nella visualizzazione dell' immagine"></div>
+        </div><!-- fine div.gallery -->
+
+        <!---------------------------------------------- small-details --------------------------------------->
+
+        <div class="small-details">
+            <h2>L' intera location è affittata da Brandon</h2>
+            <p>2 ospiti &nbsp; &nbsp; 2 letti &nbsp; &nbsp; 1 bagno &nbsp;</p>
+            <h4>$100 / giorno</h4>
+        </div><!-- fine div.small-details -->
+
+        <hr class="line">
+
+        <!---------------------------------------------- check-form ------------------------------------------->
+
+        <form class="check-form">
+            <div>
+                <label>Check-in</label>
+                <input type="text" placeholder="Aggiungi data">
+            </div>
+
+            <div>
+                <label>Check-out</label>
+                <input type="text" placeholder="Aggiungi data">
+            </div>
+
+            <div class="guest-field">
+                <label>N. Ospiti</label>
+                <input type="text" placeholder="2 ospiti">
+            </div><!-- fine div.guest-field -->
+
+            <button type="submit">Controllo disponibilità</button>
+        </form> <!-- fine div.check-form -->
+
+        <!---------------------------------------------- details-list ----------------------------------------->
+
+        <ul class="details-list">
+            <li>
+                <i class="fas fa-home"></i> Tutta la casa
+                <span>Avrete l'intera location solo per voi!</span>
+            </li>
+            
+            <li>
+                <i class="fas fa-paint-brush"></i> Pulizia avanzata
+                <span>Questo proprietario si è impegnato nel processo di pulizia di staybnb</span>
+            </li>
+
+            <li>
+                <i class="fas fa-map-marker-alt"></i> Location fantastica
+                <span>Il 90% degli ospiti recenti ha dato alla location una valutazione di 5 stelle</span>
+            </li>
+
+            <li>
+                <i class="fas fa-heart"></i> Ottima esperienza di check-in
+                <span>Il 100% degli ospiti recenti ha dato al check-in una valutazione di 5 stelle</span>
+            </li>
+        </ul><!-- fine ul.details-list -->
+
+        <hr class="line">
+
+        <p class="home-description">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+            Ut dolores perspiciatis porro fugiat et neque aperiam, 
+            qui rem mollitia officiis ipsum voluptas nam earum adipisci maxime voluptates ex nulla praesentium!
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+            Ut dolores perspiciatis porro fugiat et neque aperiam, 
+            qui rem mollitia officiis ipsum voluptas nam earum adipisci maxime voluptates ex nulla praesentium!
+        </p><!-- fine p.home-description -->
+
+        <!---------------------------------------------- map -------------------------------------------------->
+
+        <div class="map">
+            <h3>Posizione sulla mappa</h3>
+
+            <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50492.95166804189!2d-122.45820206364478!3d37.72414964295907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20California%2C%20Stati%20Uniti!5e0!3m2!1sit!2sit!4v1651006861932!5m2!1sit!2sit" 
+            width="600" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
+            <b>San Francisco, California, Stati Uniti</b>
+            <p>è come una casa lontano da casa.</p>
+        </div><!-- fine div.map -->
+
+        <hr class="line">
+
+        <!---------------------------------------------- host ----------------------------------------------->
+
+        <div class="host">
+            <img src="images/host.png" alt="c' è un problema nella visualizzazione dell' immagine">
+
+            <div>
+                <h2>Ospitati da Brandon</h2>
+                <p>
+                    <span>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </span>
+                    &nbsp; &nbsp; 245 recensioni &nbsp; &nbsp; percentuale di risposta 100% 
+                    &nbsp; &nbsp; tempo di risposta: 60 min
+                </p>
+            </div>
+        </div><!-- fine div.host -->
+
+        <a href="#" class="contact-host">Contatta proprietario</a>
+    </div><!-- fine div.house-details -->
+
+    <!---------------------------------------------- container ------------------------------------------------>
+
+    <div class="container">
+        <footer class="footer">
+            <a href="http://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+            <a href="http://www.youtube.com"><i class="fab fa-youtube"></i></a>
+            <a href="http://www.twitter.com"><i class="fab fa-twitter"></i></a>
+            <a href="http://www.linkedin.com"><i class="fab fa-linkedin-in"></i></a>
+            <a href="http://www.instagram.com"><i class="fab fa-instagram"></i></a>
+            <hr>
+            <p> &copy; staybnb corporation. Tutti i diritti sono riservati.</p>
+        </footer><!-- fine footer.footer -->
+    </div><!-- fine div.container-->
+</body>
+</html>

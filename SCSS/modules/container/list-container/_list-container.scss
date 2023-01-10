@@ -1,0 +1,15 @@
+.list-container
+{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 767px)
+{
+    .list-container
+    {
+        margin-top: 150px;
+    }
+}

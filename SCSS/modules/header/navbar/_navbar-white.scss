@@ -1,0 +1,26 @@
+.navbar-white
+{
+    background-color: #fff;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.05);
+
+    .nav-links li a 
+    {
+        color: #000;
+    }
+
+    .register-btn
+    {
+        background-color: #ff5361;
+        color: #fff;
+    }
+}
+
+nav.navbar-white .fa-bars
+{
+    color: #000;
+}
+
+.navbar-white .active::after
+{
+   background-color: #ff5361;
+}

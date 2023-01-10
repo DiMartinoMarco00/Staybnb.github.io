@@ -1,0 +1,29 @@
+.details-list
+{
+    list-style-type: none;
+    margin: 50px 0;
+
+    li 
+    {
+        margin-left: 50px;
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 20px;
+        color: #555;
+        position: relative;
+
+        span 
+        {
+            display: block;
+            font-weight: 400;
+            font-size: 12px;
+        }
+
+        i 
+        {
+            position: absolute;
+            top: 5px;
+            left: -40px;
+        }
+    }
+}

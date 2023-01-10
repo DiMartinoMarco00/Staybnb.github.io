@@ -1,0 +1,36 @@
+.footer
+{
+    margin: 80px 0px 10px;
+    text-align: center;
+
+    a 
+    {
+        text-decoration: none;
+        color: #999;
+        font-size: 20px;
+        margin: 0px 10px;
+    }
+
+    hr 
+    {
+        background-color: #999;
+        height: 1px;
+        width: 100%;
+        border: 0px;
+        margin: 20px 0px;
+    }
+
+    p 
+    {
+        padding-bottom: 15px;
+    }
+}// fine .footer
+
+
+@media only screen and (max-width: 767px)
+{
+    footer p 
+    {
+        font-size: 12px;
+    }
+}

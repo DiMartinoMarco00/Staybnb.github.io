@@ -1,0 +1,15 @@
+.sub-title
+{
+    margin: 50px 0px 20px;
+    font-size: 4.4vh;
+    font-weight: 500;
+    color: #333;
+}
+
+@media only screen and (max-width: 767px)
+{
+    .sub-title
+    {
+        font-size: 4vh;
+    }
+}

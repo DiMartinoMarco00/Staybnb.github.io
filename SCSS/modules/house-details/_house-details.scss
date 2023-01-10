@@ -1,0 +1,12 @@
+.house-details
+{
+    padding: 0 10%;
+}
+
+@media only screen and (max-width: 767px)
+{
+    .house-details
+    {
+        margin-top: 150px;
+    }
+}

@@ -1,0 +1,27 @@
+@media only screen and (max-width: 767px) 
+{
+    .cta 
+    {
+        padding: 15% 5%;
+
+        h3 
+        {
+            font-size: 3.5vh;
+            line-height: 5vh;
+        }
+
+        p 
+        {
+            font-size: 14px;
+            padding: 0 10px;
+        }
+
+        .cta-btn
+        {
+            padding: 6px 15px;
+            border-radius: 4px;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+    }
+}

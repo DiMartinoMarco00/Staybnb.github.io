@@ -1,0 +1,896 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+.line {
+  border: 0;
+  height: 1px;
+  background-color: #ccc;
+  width: 100%;
+  max-width: 800px;
+  margin: 20px 0 50px;
+}
+
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/banner.png);
+  background-size: cover;
+  background-position: center;
+}
+.header h1 {
+  font-size: 5vh;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  padding-top: 22%;
+}
+
+@media only screen and (max-width: 767px) {
+  .header h1 {
+    padding-top: 132.5px;
+    font-size: 3vh;
+  }
+}
+/*
+   Viene usato il selettore di elemento nav al posto di #navbar perchè altrimenti il menu a discesa
+   non si attiva quando clicchiamo sull' hamburgger icon quando è attiva la visualizzazione mobile
+   non so perchè si verifica questo problema, però intanto c' è.
+*/
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 7%;
+}
+nav .fa-bars {
+  display: none;
+}
+
+.logo {
+  width: 140px;
+  cursor: pointer;
+}
+
+.nav-links li {
+  list-style: none;
+  display: inline-block;
+  margin: 10px 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.active {
+  position: relative;
+}
+
+.active::after {
+  content: "";
+  background-color: #fff;
+  width: 25px;
+  height: 2px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -12px;
+  border-radius: 2px;
+}
+
+.register-btn {
+  background-color: #fff;
+  color: #000;
+  padding: 8px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 767px) {
+  .logo {
+    position: fixed;
+    top: 4%;
+    left: 7%;
+  }
+  nav {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    display: inline-block;
+    width: 100%;
+    padding: 100px 7% 0;
+    background-color: #000;
+    text-align: right;
+    max-height: 100px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+  }
+  nav .fa-bars {
+    display: block;
+    position: fixed;
+    top: 4%;
+    right: 7%;
+    color: #fff;
+    font-size: 28px;
+  }
+  nav .nav-links {
+    margin: 10px 0;
+    display: block;
+  }
+  .register-btn {
+    margin: 15px 0px 30px;
+    display: inline-block;
+  }
+  .active::after {
+    left: -40px;
+    transform: translate(0, 50%);
+    bottom: 50%;
+  }
+  .hidemenu {
+    max-height: 325px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 920px) {
+  nav {
+    padding: 20px 2%;
+  }
+  nav .nav-links li {
+    font-size: 15px;
+    margin: 10px 7.5px;
+  }
+}
+@media only screen and (min-width: 550px) {
+  nav .nav-links li {
+    font-size: 15px;
+    margin: 10px 15px;
+  }
+}
+.navbar-white {
+  background-color: #fff;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
+}
+.navbar-white .nav-links li a {
+  color: #000;
+}
+.navbar-white .register-btn {
+  background-color: #ff5361;
+  color: #fff;
+}
+
+nav.navbar-white .fa-bars {
+  color: #000;
+}
+
+.navbar-white .active::after {
+  background-color: #ff5361;
+}
+
+.search-bar {
+  background-color: #fff;
+  width: 75%;
+  margin: 30px auto;
+  padding: 6px 10px 6px 30px;
+  border-radius: 50px;
+}
+.search-bar form {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.search-bar form input {
+  display: block;
+  border: 0px;
+  outline: none;
+  background: transparent;
+}
+.search-bar form button {
+  background-color: #ff5361;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+.search-bar form button img {
+  width: 15px;
+  margin-top: 7px;
+}
+.search-bar form label {
+  font-weight: 600;
+}
+
+.location-input {
+  flex: 1;
+}
+
+@media only screen and (max-width: 767px) {
+  .search-bar {
+    width: 90%;
+    margin: 30px auto;
+    padding: 20px 10px 30px;
+    border-radius: 5px;
+    position: relative;
+  }
+  .search-bar form {
+    display: block;
+  }
+  .search-bar form input {
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    padding: 10px;
+  }
+  .search-bar form button {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 920px) {
+  .search-bar {
+    width: 85%;
+  }
+}
+.container {
+  padding: 0% 7%;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 920px) {
+  .container h1 {
+    font-size: 2.5vh;
+  }
+}
+.about-msg {
+  text-align: center;
+  margin: 80px 0px;
+  color: #333;
+  font-size: 17px;
+}
+.about-msg h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 767px) {
+  .about-msg {
+    font-size: 15px;
+  }
+  .about-msg h2 {
+    font-size: 22px;
+  }
+  .about-msg p {
+    padding: 0 5%;
+    font-size: 15px;
+  }
+}
+.cta {
+  margin: 80px 0px;
+  background-image: linear-gradient(to right, #3f2321, transparent), url(../images/banner-2.png);
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  padding: 5%;
+  color: #fff;
+}
+.cta h3 {
+  font-size: 4vh;
+  line-height: 5vh;
+  font-weight: 500;
+}
+.cta p {
+  font-size: 18px;
+  margin: 10px 0px;
+}
+
+.cta-btn {
+  background-color: #ff5361;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 12.5px;
+  border-radius: 10px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+@media only screen and (max-width: 767px) {
+  .cta {
+    padding: 15% 5%;
+  }
+  .cta h3 {
+    font-size: 3.5vh;
+    line-height: 5vh;
+  }
+  .cta p {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+  .cta .cta-btn {
+    padding: 6px 15px;
+    border-radius: 4px;
+    margin-top: 10px;
+    font-size: 16px;
+  }
+}
+.exclusives {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 30px;
+}
+.exclusives div {
+  position: relative;
+}
+.exclusives div img {
+  width: 100%;
+  border-radius: 10px;
+}
+.exclusives div span {
+  position: absolute;
+  top: 25%;
+  left: 32.5%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+.exclusives div span h3 {
+  font-size: 17px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 920px) {
+  .exclusives {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 50px;
+  }
+  .exclusives span {
+    left: 35%;
+  }
+  .exclusives h3 {
+    font-size: 20px;
+  }
+}
+.footer {
+  margin: 80px 0px 10px;
+  text-align: center;
+}
+.footer a {
+  text-decoration: none;
+  color: #999;
+  font-size: 20px;
+  margin: 0px 10px;
+}
+.footer hr {
+  background-color: #999;
+  height: 1px;
+  width: 100%;
+  border: 0px;
+  margin: 20px 0px;
+}
+.footer p {
+  padding-bottom: 15px;
+}
+
+@media only screen and (max-width: 767px) {
+  footer p {
+    font-size: 12px;
+  }
+}
+.list-container {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 767px) {
+  .list-container {
+    margin-top: 150px;
+  }
+}
+.left-col {
+  flex-basis: 70%;
+}
+.left-col h1 {
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.house {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 30px 0px;
+  border-top: 1px solid #ccc;
+}
+
+.house-img {
+  flex-basis: 40%;
+}
+.house-img img {
+  width: 100%;
+  border-radius: 12px;
+}
+.house-img h3 {
+  font-weight: 600;
+  color: #333;
+  font-size: 22px;
+  margin: 4px 0px;
+}
+
+.house-info {
+  flex-basis: 58%;
+  color: #555;
+}
+.house-info i {
+  color: #ff5361;
+  font-size: 18px;
+  margin-top: 10px 1px;
+}
+.house-info a {
+  text-decoration: none;
+  color: #555;
+}
+
+.house-price {
+  text-align: right;
+}
+.house-price h4 {
+  font-size: 20px;
+}
+.house-price h4 span {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 767px) {
+  .left-col, .house-img, .house-info {
+    flex-basis: 100%;
+  }
+  .left-col h1 {
+    font-size: 25px;
+  }
+  .house-info h3 {
+    font-size: 18px;
+  }
+  .house-info i {
+    font-size: 16px;
+  }
+}
+.right-col {
+  flex-basis: 25%;
+}
+
+.sidebar {
+  border: 1px solid #999;
+  padding: 20px 30px;
+  margin-top: 30px;
+}
+.sidebar h2 {
+  font-weight: 500;
+}
+.sidebar h3 {
+  font-weight: 500;
+  margin: 20px 0px 10px;
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  color: #555;
+  margin-bottom: 10px;
+}
+.filter p {
+  flex: 1;
+}
+.filter input {
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.sidebar-link {
+  text-align: right;
+  margin: 20px 0px;
+}
+.sidebar-link a {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .right-col {
+    flex-basis: 100%;
+  }
+}
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0px;
+}
+.pagination img {
+  width: 15px;
+  margin: 10px 20px;
+}
+.pagination span {
+  margin: 10px 5px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.pagination .current {
+  background-color: #333;
+  color: #fff;
+}
+
+.right-arrow {
+  transform: rotate(180deg);
+}
+
+@media only screen and (max-width: 767px) {
+  .pagination span {
+    margin: 10px 2px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+  }
+}
+.stories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 30px;
+  margin-bottom: 30px;
+}
+.stories div {
+  position: relative;
+  text-align: center;
+}
+.stories div img {
+  width: 100%;
+  border-radius: 10px;
+}
+.stories p {
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 25px;
+}
+
+.start-btn {
+  text-decoration: none;
+  background-color: #ff5361;
+  color: #fff;
+  width: 25%;
+  max-width: 350px;
+  display: block;
+  text-align: center;
+  margin: 60px auto;
+  padding: 10px;
+  border-radius: 30px;
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+  .stories p {
+    font-size: 20px;
+  }
+  .start-btn {
+    width: 70%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 920px) {
+  .stories p {
+    font-size: 20px;
+  }
+  .start-btn {
+    width: 30%;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .start-btn {
+    width: 40%;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 575px) {
+  .start-btn {
+    width: 50%;
+  }
+}
+.trending {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+  grid-gap: 30px;
+  margin-bottom: 30px;
+}
+.trending div img {
+  width: 100%;
+  border-radius: 10px;
+}
+.trending h3 {
+  font-size: 600;
+  margin-top: 10px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 920px) {
+  .trending {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 50px;
+  }
+}
+.sub-title {
+  margin: 50px 0px 20px;
+  font-size: 4.4vh;
+  font-weight: 500;
+  color: #333;
+}
+
+@media only screen and (max-width: 767px) {
+  .sub-title {
+    font-size: 4vh;
+  }
+}
+.house-details {
+  padding: 0 10%;
+}
+
+@media only screen and (max-width: 767px) {
+  .house-details {
+    margin-top: 150px;
+  }
+}
+.check-form {
+  margin: 30px 0;
+  background-color: #fff;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 10px 50px;
+}
+.check-form label {
+  display: block;
+}
+.check-form div {
+  padding: 0px;
+}
+.check-form input {
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  width: 50%;
+}
+.check-form button {
+  background-color: #ff5361;
+  border: 0;
+  outline: none;
+  color: #fff;
+  padding: 10px;
+  width: 300;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.guest-field {
+  flex: 1;
+}
+
+.details-list {
+  list-style-type: none;
+  margin: 50px 0;
+}
+.details-list li {
+  margin-left: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #555;
+  position: relative;
+}
+.details-list li span {
+  display: block;
+  font-weight: 400;
+  font-size: 12px;
+}
+.details-list li i {
+  position: absolute;
+  top: 5px;
+  left: -40px;
+}
+
+.gallery {
+  display: grid;
+  grid-gap: 10px;
+  /*
+      (da inserire a livello di contenitore) 
+      La proprietà grid-template-areas ci permette di definire un valore tra singoli apici 
+      che corrisponde al valore della proprietà grid-area dell' elemento del contenitore.
+
+      Il singolo apice rappresenta una riga, il valore rappresenta la posizione della colonna occupata, 
+      i . rappresentano le posizioni degli altri elementi del contenitore.
+
+      es: 
+      il contenitore ha 5 elementi come valore della proprietà grid-template-areas: abbiamo: 'first first . .'
+      cio significa che l' elemento che possiede first come valore della proprietà grid-area occuperà 
+      la prima e la seconda colonna della riga mentre le altre due colonne sulla stessa riga verranno 
+      occupate dagli altri elementi del contenitore.
+
+      Possiamo specificare più righe inserendo altri singoli apici separati da uno spazio dai precedenti.
+
+  */
+  grid-template-areas: "first first . ." "first first . .";
+  margin: 20px 0;
+}
+
+.gallery div img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
+.gallery-img-1 {
+  grid-area: first;
+}
+
+@media only screen and (max-width: 767px) {
+  .gallery {
+    grid-template-areas: "first first" ". ." ". .";
+  }
+}
+.host {
+  display: flex;
+  align-items: center;
+}
+.host img {
+  width: 80px;
+  border-radius: 50%;
+  margin-right: 30px;
+}
+.host h2 {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.host i {
+  color: #ff5361;
+}
+
+.contact-host {
+  display: inline-block;
+  margin: 40px 0 40px 120px;
+  text-decoration: none;
+  color: #555;
+  padding: 15px 30px;
+  border: 1px solid #ff5361;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 767px) {
+  .host {
+    display: block;
+    line-height: 28px;
+  }
+  .host h2 {
+    font-size: 22px;
+  }
+  .contact-host {
+    margin: 40px 0;
+  }
+}
+@media only screen and (min-width: 767px) and (max-width: 1150px) {
+  .host span {
+    display: block;
+  }
+}
+@media only screen and (min-width: 767px) and (max-width: 899px) {
+  .host p {
+    font-size: 13px;
+  }
+}
+.house-title {
+  margin-top: 50px;
+}
+.house-title h1 {
+  font-weight: 600;
+}
+.house-title .row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 10px 0;
+}
+.house-title span {
+  margin: 0 20px;
+}
+.house-title i {
+  color: #ff5361;
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 767px) {
+  .row p {
+    margin-top: 10px;
+  }
+}
+.map {
+  margin: 50px 0;
+}
+.map iframe {
+  width: 100%;
+  margin-bottom: 30px;
+}
+.map h3 {
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+.map b {
+  display: block;
+  margin-bottom: 16px;
+}
+.map p {
+  font-style: italic;
+}
+
+@media only screen and (max-width: 767px) {
+  .map h3 {
+    font-size: 18px;
+    text-align: center;
+  }
+  .map b {
+    font-size: 13px;
+  }
+  .map p {
+    font-size: 12px;
+  }
+}
+@media only screen and (min-width: 767px) and (max-width: 1150px) {
+  .map h3 {
+    text-align: center;
+  }
+}
+.small-details h2 {
+  font-weight: 500;
+}
+
+.small-details h4 {
+  text-align: right;
+  font-size: 22px;
+}
+
+@media only screen and (max-width: 767px) {
+  .small-details h2 {
+    font-size: 20px;
+    margin-top: 24px;
+  }
+  .small-details h4 {
+    text-align: left;
+    margin: 10px 0;
+    font-size: 18px;
+  }
+}
+.home-description {
+  max-width: 700px;
+  margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 767px) {
+  .home-description {
+    text-align: center;
+    padding: 0 5%;
+    font-size: 13px;
+  }
+}
